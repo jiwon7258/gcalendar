@@ -76,11 +76,14 @@ def main():
 
     class_schedule = open("class_schedule.txt",'w')
     if not events:
-        class_schedule.write("일정이 없습니다") 
+        class_schedule.write("일정이 없습니다")
     for event in events:
         start = event['start'].get('dateTime', event['start'].get('date'))
         data = start + ' ' + event['summary'] + '\n'
         class_schedule.write(data)
+
+
+        
 
 
 
